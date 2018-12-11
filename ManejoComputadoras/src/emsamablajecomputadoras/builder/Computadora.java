@@ -59,17 +59,15 @@ public class Computadora {
 
     @Override
     public String toString() {
-        StringBuilder string = new StringBuilder();
+        StringBuilder details = new StringBuilder();
 
-        string.append("marca: ").append(marca).append("\t\n");
-        string.append("modelo: ").append(modelo).append("\t\n");
-        string.append("Sistema Operativo: ").append(so).append("\t\n");
-        string.append("RAM: ").append(ram).append("\t\n");
+        details.append("marca: ").append(marca).append("\n");
+        details.append("modelo: ").append(modelo).append("\n");
+        details.append("Sistema Operativo: ").append(so).append("\n");
+        details.append("RAM: ").append(ram).append("\n");
+        details.append("ALmacenamiento: ").append(almacenamiento).append("\n");
+        details.append("Mainboard: ").append(mainboard).append("\n");
 
-        string.append("ALmacenamiento: ").append(almacenamiento).append("\t\n");
-
-        string.append("Mainboard: ").append(mainboard).append("\t\n");
-
-        return string.toString();
+        return details.toString();
     }
 }
