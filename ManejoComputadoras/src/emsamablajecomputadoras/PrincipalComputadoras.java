@@ -3,7 +3,7 @@
  */
 package emsamablajecomputadoras;
 
-import emsamablajecomputadoras.builder.AsusZenbookBuilder;
+import emsamablajecomputadoras.builder.*;
 import emsamablajecomputadoras.builder.Computadora;
 import emsamablajecomputadoras.builder.ComputadoraDirector;
 
@@ -22,12 +22,17 @@ public class PrincipalComputadoras {
 
 		ComputadoraDirector director;
 		Computadora roge;
+		director = new ComputadoraDirector(new AsusROGEBuilder());
+		roge = director.build();
+		
+		System.out.print(roge.toString());
 		
 		// AsusZenbook
 		Computadora zenbook;
 
 		director = new ComputadoraDirector(new AsusZenbookBuilder());
 		zenbook = director.build();
+		
 		System.out.print(zenbook.toString());
 
 	}

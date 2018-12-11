@@ -51,8 +51,6 @@ public class AsusROGEBuilder implements ComputadoraBuilder{
 		
 		return roge;
 	}
-}
 
-		return roge;
-	}
+
 }
