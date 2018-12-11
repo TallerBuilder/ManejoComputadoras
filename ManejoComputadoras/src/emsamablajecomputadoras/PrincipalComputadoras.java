@@ -3,7 +3,9 @@
  */
 package emsamablajecomputadoras;
 
-import emsamablajecomputadoras.creacional.*;
+import emsamablajecomputadoras.builder.AsusZenbookBuilder;
+import emsamablajecomputadoras.builder.Computadora;
+import emsamablajecomputadoras.builder.ComputadoraDirector;
 
 /**
  * @author djurado
@@ -17,14 +19,16 @@ public class PrincipalComputadoras {
 	public static void main(String[] args) {
 		// Necesito ensamblar 2 computadoras
 		// AsusROGE
-		Computador roge = new Computador(/*todos los atributos*/);
+
+		ComputadoraDirector director;
+		Computadora roge;
 		
 		// AsusZenbook
-		Computador zenbook = new Computador(/*todos los atributos*/);
-		
-		//Mostrar las caracteristicas de ambas computadoras 
-		roge.toString();
-		zenbook.toString();
+		Computadora zenbook;
+
+		director = new ComputadoraDirector(new AsusZenbookBuilder());
+		zenbook = director.build();
+		System.out.print(zenbook.toString());
 
 	}
 

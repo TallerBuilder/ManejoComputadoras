@@ -55,4 +55,21 @@ public class Computadora {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+
+        string.append("marca: ").append(marca).append("\t\n");
+        string.append("modelo: ").append(modelo).append("\t\n");
+        string.append("Sistema Operativo: ").append(so).append("\t\n");
+        string.append("RAM: ").append(ram).append("\t\n");
+
+        string.append("ALmacenamiento: ").append(almacenamiento).append("\t\n");
+
+        string.append("Mainboard: ").append(mainboard).append("\t\n");
+
+        return string.toString();
+    }
 }

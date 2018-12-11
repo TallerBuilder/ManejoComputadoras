@@ -24,4 +24,9 @@ public class Almacenamiento {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(capacidadGB) + "GB " + tipo;
+	}
 }
